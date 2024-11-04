@@ -26,17 +26,18 @@ html {
   color: #ffffff;
   font-size: 1.2em;
   font-weight: bold;
-  display: block;
+  display: flex;
+    justify-content: center; 
 }
 
 #place-search {
-  width: 100%;
+  width: 90%;
+  margin:auto;
   padding: 10px;
   font-size: 14px;
   border: none;
   border-radius: 5px;
   outline: none;
-  margin-top: 10px;
 }
 
 
@@ -122,10 +123,12 @@ html {
   border-radius: 3px;
 }
 
-
-#place-details::-webkit-scrollbar {
-  width: 6px;
+#places-list::-webkit-scrollbar:horizontal{
+  display:none;
 }
+
+
+
 
 #logo {
   width: 100%;

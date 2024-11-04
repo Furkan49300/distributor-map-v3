@@ -5,18 +5,11 @@ let detailsContainer;
 let searchBar;
 let apiKey;
 
-async function loadGoogleMaps() {
-    try {
-        const response = await fetch("http://localhost:3000/api/google-maps-key"); // Appel au backend pour obtenir la clé API
-        const data = await response.json();
-        apiKey = data.apiKey;
+function loadGoogleMaps() {
         (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-            key: apiKey
+            key: "AIzaSyBcCHz0HxzjTRiB6PnOnIOFtKL7fteGWLE"
         });
         initMap();
-    } catch (error) {
-        console.error("Erreur lors du chargement :", error);
-    }
 };
 
 
@@ -38,10 +31,10 @@ async function initMap() {
         fullscreenControl: false,
     });
 
-    placesListElement = document.getElementById("places-list");
-    detailsContainer = document.getElementById("place-details");
-    searchBar = document.getElementById("search-container");
-    const searchInput = document.getElementById("place-search");
+    placesListElement = document.querySelector("#places-list");
+    detailsContainer = document.querySelector("#place-details");
+    searchBar = document.querySelector("#search-container");
+    const searchInput = document.querySelector("#place-search");
     const autocomplete = new Autocomplete(searchInput);
 
     autocomplete.bindTo("bounds", map);
@@ -119,7 +112,7 @@ function createListItem(place, distance) {
     const listItem = document.createElement("li");
     listItem.innerHTML = `
     <h3>${place.Distributeur}</h3>
-    <p>${place.Adresse}</p>
+    <p>${place.Adresse}, ${place.lieu}</p>
     ${distance !== undefined ? `<p>Distance : ${distance.toFixed(1)} km</p>` : ""}
   `;
     listItem.classList.add("place-item");
@@ -147,6 +140,7 @@ function showPlaceDetails(place) {
         <h3>Agence ${place.Distributeur} ${place.lieu}</h3>
         <p> ${place.Adresse}</p>
     </div>
+    <p><strong>Produits:</strong> ${place.Produit}</p>
     <p><strong>Zone:</strong> ${place.Zone}</p>
     <p><strong>Gestionnaire:</strong> ${place.Gestionnaire}</p>
     <p><strong>Responsable:</strong> ${place.Responsable}</p>
@@ -161,10 +155,10 @@ function showPlaceDetails(place) {
     placesListElement.style.display = "none";
     searchBar.style.display = "none";
 
-    document.getElementById("back-button").onclick = () => {
+    document.querySelector("#back-button").onclick = () => {
         detailsContainer.style.display = "none";
         placesListElement.style.display = "block";
-        searchBar.style.display = "block";
+        searchBar.style.display = "flex";
 
 
         map.setCenter({ lat: 46.603354, lng: 1.888334 });
@@ -223,6 +217,7 @@ function calculateDistance(lat1, lng1, lat2, lng2) {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
 }
+
 
 
 loadGoogleMaps();

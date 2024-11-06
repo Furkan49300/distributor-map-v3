@@ -4,7 +4,7 @@ let placesListElement;
 let detailsContainer;
 let searchBar;
 let apiKey;
-
+let resultatpour=document.createElement("h4");
 function loadGoogleMaps() {
         (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
             key: "AIzaSyBcCHz0HxzjTRiB6PnOnIOFtKL7fteGWLE"
@@ -16,11 +16,11 @@ function loadGoogleMaps() {
 
 async function initMap() {
     const { Map } = await google.maps.importLibrary("maps");
-    const { Marker } = await google.maps.importLibrary("marker");
+    const { AdvancedMarkerElement, PinElement, Marker } = await google.maps.importLibrary("marker");
     const { Autocomplete } = await google.maps.importLibrary("places");
 
     map = new Map(document.getElementById("map"), {
-        center: { lat: 46.603354, lng: 1.888334 },
+        center: { lat: 46.603354, lng: 2.394897792076994 },
         zoom: 6,
         mapId: "f49b53da0964c209",
         zoomControl: false,
@@ -51,10 +51,14 @@ async function initMap() {
 
     autocomplete.addListener("place_changed", () => {
         const place = autocomplete.getPlace();
-
+        let address= place["formatted_address"];
+        console.log(address);
         map.panTo(place.geometry.location);
         map.setZoom(10);
 
+        let resultat = address.replace(/\d+/g, '');
+        resultatpour.innerHTML="Résultats pour " + resultat;
+        searchBar.insertAdjacentElement('afterend',resultatpour);
 
         const sortedMarkers = sortMarkersByDistance(place.geometry.location);
         updatePlacesList(sortedMarkers);
@@ -64,23 +68,22 @@ async function initMap() {
 
 function addMarker(place) {
     const defaultIcon = {
-        path: "M12 2C8.1 2 5 5.1 5 9c0 4.3 4.5 10.2 6.3 12.8.4.6 1.2.6 1.6 0C14.5 19.2 19 13.3 19 9c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z",
-        fillColor: "#004899",
-        fillOpacity: 1,
-        strokeWeight: 0,
-        scale: 1.5,
-        anchor: new google.maps.Point(12, 24)
+        url:"marker.png",
+        scaledSize: new google.maps.Size(25, 34),
+        anchor: new google.maps.Point(12.5, 34)
     };
 
     const selectedIcon = {
         ...defaultIcon,
-        scale: 2,
+        scaledSize: new google.maps.Size(35, 47),
+        anchor: new google.maps.Point(17.5, 47)
     };
 
     const marker = new google.maps.Marker({
         map,
         position: { lat: place.latitude, lng: place.longitude },
         title: place.Distributeur,
+        animation: google.maps.Animation.DROP,
         icon: defaultIcon,
     });
 
@@ -104,17 +107,20 @@ function updatePlacesList(placesWithDistances) {
     placesWithDistances.forEach(({ place, distance }) => {
         const listItem = createListItem(place, distance);
         placesListElement.appendChild(listItem);
+        
     });
 }
 
 
 function createListItem(place, distance) {
+    
     const listItem = document.createElement("li");
     listItem.innerHTML = `
-    <h3>${place.Distributeur}</h3>
-    <p>${place.Adresse}, ${place.lieu}</p>
-    ${distance !== undefined ? `<p>Distance : ${distance.toFixed(1)} km</p>` : ""}
+    <p class="agence-title">${place.Distributeur} </p>
+    <p class="agence-subtitle">${place.Adresse}, ${place.zipcode} ${place.lieu}</p>
+    ${distance !== undefined ? `<p><strong> ${distance.toFixed(1)} km</strong></p>` : ""}
   `;
+  
     listItem.classList.add("place-item");
     listItem.onclick = () => {
         map.panTo({ lat: place.latitude, lng: place.longitude });

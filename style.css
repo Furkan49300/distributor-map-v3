@@ -22,7 +22,6 @@ html {
 
 #search-container {
   padding: 15px;
-  background-color: #004899;
   color: #ffffff;
   font-size: 1.2em;
   font-weight: bold;
@@ -35,9 +34,10 @@ html {
   margin:auto;
   padding: 10px;
   font-size: 14px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
+  outline: 0;
+  border-radius: 15px;
+    border: 1px solid #b1b2b3;
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, .3);
 }
 
 
@@ -54,7 +54,6 @@ html {
   border-bottom: 1px solid #e0e0e0;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
-  border-left: 4px solid #02aad0;
 
 }
 
@@ -63,23 +62,10 @@ html {
   transform: translateX(5px);
 }
 
-.place-item h3 {
-  margin: 0;
-  color: #004899;
-  font-weight: bold;
-}
-
-.place-item p {
-  margin: 5px 0 0;
-  font-size: 0.9em;
-  color: #666666;
-}
 
 
 .highlight {
   background-color: #e7f1ff;
-  font-weight: bold;
-  border-left: 4px solid #004899;
 
 }
 
@@ -116,11 +102,11 @@ html {
 
 #places-list::-webkit-scrollbar {
   width: 6px;
+  background-color: #dad4d4;
 }
 
 #places-list::-webkit-scrollbar-thumb {
-  background-color: #02aad0;
-  border-radius: 3px;
+  background-color: #a3abb4;
 }
 
 #places-list::-webkit-scrollbar:horizontal{
@@ -193,4 +179,41 @@ html {
 
 .drop {
   animation: drop 0.3s linear forwards;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  #mapContainer {
+    display: flex;
+    flex-direction: column-reverse;  
+    
+  }
+
+
+  #sidebar {
+    width: 100%;
+  }
+
+  #places-list {
+    overflow-y: auto;  
+    max-height: 500px; 
+  }
+}
+
+.agence-title {
+  
+  margin-bottom: 10px;
+  color: #004899;
+  width: 70%;
+}
+.agence-subtitle {
+  font-size: 14px;
+}
+p,h4 {
+  font-family: 'Source Sans 3', Arial, Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+h4 {
+  margin-left: 15px;
 }

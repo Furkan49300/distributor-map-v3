@@ -91,7 +91,10 @@ function addMarker(place) {
 
 
     marker.addListener("click", () => {
-
+        if (searchBar.style.display == "none") {
+            console.log(place);
+            showPlaceDetails(place);
+        }
         markers.forEach(({ marker }) => marker.setIcon(defaultIcon));
 
 
@@ -135,36 +138,44 @@ function showPlaceDetails(place) {
     detailsContainer.innerHTML = `
     <div class="header-container">
 <img id="logo" src="logo.jpg"/>
-<button id="back-button" aria-label="Retour">
-  <svg width="24" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15 19L8 12L15 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
+
 </div>
 <div class="place-detail">
     <div class="cadre">
-        <h3>Agence ${place.Distributeur} ${place.lieu}</h3>
-        <p> ${place.Adresse}</p>
+    <div id="back-button" aria-label="Retour"> <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6a1.997 1.997 0 0 0 0-2.822L6.83 13H21v-2z" fill="blue"/>
+        </svg>
+  Revenir à la page précédente
+</div>
+        <p class="agence-title-detail">Agence ${place.Distributeur} ${place.lieu}</p>
+        <p class="agence-subtitle"> ${place.Adresse}</p>
     </div>
-    <p><strong>Produits:</strong> ${place.Produit}</p>
-    <p><strong>Zone:</strong> ${place.Zone}</p>
-    <p><strong>Gestionnaire:</strong> ${place.Gestionnaire}</p>
-    <p><strong>Responsable:</strong> ${place.Responsable}</p>
-    <p><strong>Email:</strong> ${place.mail}</p>
-    <p><strong>Téléphone:</strong> ${place["Téléphone"]}</p>
-    <p><strong>Journée découverte:</strong> ${place["Journée découverte"]}</p>
-    <p><strong>Lieu:</strong> ${place.lieu}</p>
+    <div class="details-section">
+    <h2> Détails</h2>
+    <ul>
+    <li>Produits: <span>${place.Produit}</span></li>
+    <li>Zone: <span>${place.Zone}</span></li>
+    <li>Gestionnaire: <span>${place.Gestionnaire}</span></li>
+    <li>Responsable: <span>${place.Responsable}</span></li>
+    <li>Email: ${place.mail}</li>
+    <li>Téléphone: ${place['Téléphone']}</li>
+    <li>Journée découverte: <span>${place['Journée découverte']}</span></li>
+</ul>
+</div>
     
     </div>
   `;
     detailsContainer.style.display = "block";
     placesListElement.style.display = "none";
     searchBar.style.display = "none";
+    resultatpour.style.display='none';
+
 
     document.querySelector("#back-button").onclick = () => {
         detailsContainer.style.display = "none";
         placesListElement.style.display = "block";
         searchBar.style.display = "flex";
+        resultatpour.style.display='block';
 
 
         map.setCenter({ lat: 46.603354, lng: 1.888334 });

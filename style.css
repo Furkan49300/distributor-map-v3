@@ -26,17 +26,17 @@ html {
   font-size: 1.2em;
   font-weight: bold;
   display: flex;
-    justify-content: center; 
+  justify-content: center;
 }
 
 #place-search {
   width: 90%;
-  margin:auto;
+  margin: auto;
   padding: 10px;
   font-size: 14px;
   outline: 0;
   border-radius: 15px;
-    border: 1px solid #b1b2b3;
+  border: 1px solid #b1b2b3;
   box-shadow: 0 0 10px -5px rgba(0, 0, 0, .3);
 }
 
@@ -76,25 +76,23 @@ html {
   overflow-y: auto;
 }
 
-#place-details p {
-  margin: 8px 0;
-  font-size: 0.9em;
-  color: #333333;
-}
 
-#place-details button {
-  background-color: #004899;
-  color: #ffffff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
+
+#back-button {
+  color: #004899;
   cursor: pointer;
-  transition: background-color 0.3s;
-  font-weight: bold;
+  font-family: SourceSansRegular, Arial, Tahoma, Verdana, Helvetica, sans-serif;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; 
 }
 
-
-
+#back-button svg {
+  fill: #004899;
+}
 #map {
   flex: 1;
 }
@@ -109,8 +107,8 @@ html {
   background-color: #a3abb4;
 }
 
-#places-list::-webkit-scrollbar:horizontal{
-  display:none;
+#places-list::-webkit-scrollbar:horizontal {
+  display: none;
 }
 
 
@@ -134,17 +132,14 @@ html {
   background: white;
   position: relative;
   z-index: 100;
+  margin-bottom: 30px;
+  ;
 }
 
 .header-container {
   position: relative;
 }
 
-#back-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
 
 @keyframes drop {
   0% {
@@ -186,8 +181,8 @@ html {
 @media screen and (max-width: 500px) {
   #mapContainer {
     display: flex;
-    flex-direction: column-reverse;  
-    
+    flex-direction: column-reverse;
+
   }
 
 
@@ -196,24 +191,55 @@ html {
   }
 
   #places-list {
-    overflow-y: auto;  
-    max-height: 500px; 
+    overflow-y: auto;
+    max-height: 500px;
   }
 }
 
 .agence-title {
-  
+
   margin-bottom: 10px;
   color: #004899;
   width: 70%;
 }
+
 .agence-subtitle {
   font-size: 14px;
 }
-p,h4 {
+
+p,
+h4 {
   font-family: 'Source Sans 3', Arial, Tahoma, Verdana, Helvetica, sans-serif;
 }
 
 h4 {
   margin-left: 15px;
+}
+
+.agence-title-detail {
+  font-size: 18px;
+  margin-top: 20px;
+  font-family: 'MerriweatherRegular', Arial, Tahoma, Verdana, Helvetica, sans-serif;
+  color: #4b4a4b
+}
+
+p.agence-subtitle {
+  color: #4b4a4b
+}
+
+li {
+  color: #4b4a4b;
+  font-family: 'Source Sans 3';
+  padding: 3px 3px;
+}
+
+h2 {
+  font-family: 'MerriweatherRegular', Arial, Tahoma, Verdana, Helvetica, sans-serif;
+  color: #4b4a4b;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+ul {
+  padding: 0 0 0 20px;
 }

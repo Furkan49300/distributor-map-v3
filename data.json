@@ -29,7 +29,6 @@
         "lieu": "HALLENNES-LEZ-HAUBOURDIN",
         "Dentiste référent?": ""
     },
-    
     {
         "latitude": 49.1372616519804,
         "longitude": -0.3317337064075102,
@@ -44,7 +43,8 @@
         "Journée découverte": "Programmée",
         "lieu": "IFS",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5"
+        "Produit": "QuickSleeper 5",
+        "logo": "assets\\logos\\Normadent\\Logo 3D (2).jpg"
     },
     {
         "latitude": 48.796029846681485,
@@ -89,7 +89,8 @@
         "Téléphone": "04 26 85 07 21",
         "Journée découverte": "Programmée",
         "lieu": "AVIGNON",
-        "Dentiste référent?": ""
+        "Dentiste référent?": "",
+        "logo": "assets\\logos\\LMD.png"
     },
     {
         "latitude": 43.368688383740945,
@@ -104,7 +105,8 @@
         "Téléphone": "",
         "Journée découverte": "Programmée",
         "lieu": "MARSEILLE",
-        "Dentiste référent?": ""
+        "Dentiste référent?": "",
+        "logo": "assets\\logos\\LMD.png"
     },
     {
         "latitude": 43.67923041948782,
@@ -119,9 +121,9 @@
         "Téléphone": "",
         "Journée découverte": "Programmée",
         "lieu": "LUNEL",
-        "Dentiste référent?": ""
+        "Dentiste référent?": "",
+        "logo": "assets\\logos\\LMD.png"
     },
-    
     {
         "latitude": 49.23645474531596,
         "longitude": 4.067179026128096,
@@ -167,7 +169,8 @@
         "Téléphone": "04 93 85 64 95 ",
         "Journée découverte": "Programmée",
         "lieu": "Nice",
-        "Dentiste référent?": ""
+        "Dentiste référent?": "",
+        "logo": "assets\\logos\\jlb.jpg"
     },
     {
         "latitude": 47.71519427298794,
@@ -189,7 +192,7 @@
         "longitude": -0.3093792232672629,
         "Gestionnaire": "JFR",
         "Distributeur": "Pyrénées dentaire",
-        "Adresse": " Idron",
+        "Adresse": "Idron",
         "zipcode": "64320",
         "Zone": "32 - 40 - 64 - 65",
         "Responsable": "Julien Delmond",
@@ -198,14 +201,15 @@
         "Journée découverte": "Programmée",
         "Date": "6-Jun-24",
         "lieu": "Casino Cap Breton",
-        "Dentiste référent?": "Rodolphe Zunzarren"
+        "Dentiste référent?": "Rodolphe Zunzarren",
+        "logo": "assets\\logos\\Pyrénées dentaire.png"
     },
     {
         "latitude": 16.17359936994373,
         "longitude": -61.66516787755657,
-        "Gestionnaire": "IO ",
+        "Gestionnaire": "IO",
         "Distributeur": "LS CONCEPT",
-        "Adresse": " Petit Bourg ",
+        "Adresse": "Petit Bourg",
         "zipcode": "97170",
         "Zone": "971 - 973",
         "Responsable": "Sophie Langlet",
@@ -214,7 +218,8 @@
         "Journée découverte": "fait en 2023",
         "Date": "",
         "lieu": "",
-        "Dentiste référent?": ""
+        "Dentiste référent?": "",
+        "logo": "assets\\logos\\LS Concept.png"
     },
     {
         "latitude": 44.340911145536744,
@@ -278,7 +283,8 @@
         "Journée découverte": "Programmée",
         "lieu": "ONTARIO",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\iLoupes logo.png"
     },
     {
         "latitude": 56.09294894997807,
@@ -294,7 +300,8 @@
         "Journée découverte": "Programmée",
         "lieu": "HORNING",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Danemark - Nordenta.png"
     },
     {
         "latitude": 24.462390044518582,
@@ -310,7 +317,8 @@
         "Journée découverte": "Programmée",
         "lieu": "ABU DHABI",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\UAE - City Pharmacy CO.png"
     },
     {
         "latitude": 59.435291326693886,
@@ -326,7 +334,8 @@
         "Journée découverte": "Programmée",
         "lieu": "TALLINN",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Estonia - ProImplant.png"
     },
     {
         "latitude": 45.780150190160974,
@@ -342,12 +351,13 @@
         "Journée découverte": "Programmée",
         "lieu": "CLERMONT FERRAND",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5"
+        "Produit": "QuickSleeper 5",
+        "logo":"assets\\logos\\logo_GDD-removebg-preview.png"
     },
     {
         "latitude": 42.660739284277405,
         "longitude": 2.90972249483178,
-        "Gestionnaire": "Alexis  Spiesser",
+        "Gestionnaire": "Alexis Spiesser",
         "Distributeur": "MACARY DENTAIRE",
         "Adresse": "9 ALLEE EUROS TECHNOSUD",
         "zipcode": "66000",
@@ -358,12 +368,13 @@
         "Journée découverte": "Programmée",
         "lieu": "PERPIGNAN",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5"
+        "Produit": "QuickSleeper 5",
+        "logo":"assets\\logos\\Logo Macary.jpg"
     },
     {
         "latitude": 44.85582314449299,
         "longitude": -0.6714683722146779,
-        "Gestionnaire": "Alexis  Spiesser",
+        "Gestionnaire": "Alexis Spiesser",
         "Distributeur": "JAASP",
         "Adresse": "10 RUE FARADAY",
         "zipcode": "33700",
@@ -390,7 +401,8 @@
         "Journée découverte": "Programmée",
         "lieu": "LA MEZIERE",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5"
+        "Produit": "QuickSleeper 5",
+        "logo":"assets\\logos\\BSD\\logo BSD cmjm JPG.jpg"
     },
     {
         "latitude": 43.55557422697623,
@@ -406,7 +418,8 @@
         "Journée découverte": "Programmée",
         "lieu": "TOULOUSE",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5"
+        "Produit": "QuickSleeper 5",
+        "logo":"assets\\logos\\LOGO DENTA 3D FD NOIR.png"
     },
     {
         "latitude": 47.31661363101661,
@@ -422,7 +435,8 @@
         "Journée découverte": "Programmée",
         "lieu": "JOUE LES TOURS",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Henry Schein.png"
     },
     {
         "latitude": 45.798734807464655,
@@ -440,7 +454,6 @@
         "Dentiste référent?": "",
         "Produit": "QuickSleeper 5"
     },
-    
     {
         "latitude": 46.33504985157867,
         "longitude": 6.884779220995632,
@@ -455,7 +468,8 @@
         "Journée découverte": "Programmée",
         "lieu": "VOUVRY",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Suisse - Condor.png"
     },
     {
         "latitude": 45.82049455757619,
@@ -471,7 +485,8 @@
         "Journée découverte": "Programmée",
         "lieu": "RILLIEUX LA PAPE",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5"
+        "Produit": "QuickSleeper 5",
+        "logo":"assets\\logos\\Logo SDM.png"
     },
     {
         "latitude": 37.98677126559895,
@@ -487,7 +502,8 @@
         "Journée découverte": "Programmée",
         "lieu": "ATHENS",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Dental Expertr.jpg"
     },
     {
         "latitude": 16.19813608946878,
@@ -503,7 +519,8 @@
         "Journée découverte": "Programmée",
         "lieu": "PETIT BOURG",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo": "assets\\logos\\LS Concept.png"
     },
     {
         "latitude": 47.49408741375139,
@@ -519,7 +536,8 @@
         "Journée découverte": "Programmée",
         "lieu": "BUDAPEST",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Hungary - Webdent.jpg"
     },
     {
         "latitude": 64.09818811718999,
@@ -535,7 +553,8 @@
         "Journée découverte": "Programmée",
         "lieu": "KOPAVOGUR",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Iceland - Tannhjol Manafoss.png"
     },
     {
         "latitude": 33.30619623893982,
@@ -551,7 +570,8 @@
         "Journée découverte": "Programmée",
         "lieu": "ALAMEERAT",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Irak - Eblal Dental.jpg"
     },
     {
         "latitude": 53.34101833967949,
@@ -567,7 +587,8 @@
         "Journée découverte": "Programmée",
         "lieu": "Dublin",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Ireland - Murray Woods.png"
     },
     {
         "latitude": 31.97453687928296,
@@ -583,7 +604,8 @@
         "Journée découverte": "Programmée",
         "lieu": "RISHON LE ZION",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Israel - Bicon.png"
     },
     {
         "latitude": 45.42103351793526,
@@ -607,7 +629,7 @@
         "Gestionnaire": "Armin Eberdorfer",
         "Distributeur": "AL QUDS STAR COMPANY",
         "Adresse": "TLA'A AL ALI 16",
-        "zipcode":"" ,
+        "zipcode": "",
         "Zone": "11185",
         "Responsable": "MOHAMMED MOUSA",
         "mail": "mohmmed_mousa@yahoo.com",
@@ -615,7 +637,8 @@
         "Journée découverte": "Programmée",
         "lieu": "AMMAN",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, Effitec Needles",
+        "logo":"assets\\logos\\Italy - Rident Innovation.png"
     },
     {
         "latitude": 55.93356494659056,
@@ -631,7 +654,8 @@
         "Journée découverte": "Programmée",
         "lieu": "SIAULIAI",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Lithuania - Litdent.png"
     },
     {
         "latitude": 33.562533863439924,
@@ -647,7 +671,8 @@
         "Journée découverte": "Programmée",
         "lieu": "CASABLANCA",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Morocco - CADM.png"
     },
     {
         "latitude": 52.3714091752561,
@@ -663,7 +688,8 @@
         "Journée découverte": "Programmée",
         "lieu": "ZM AMSTERDAM",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne",
+        "logo":"assets\\logos\\Netherlands - Straight Dental.JPG"
     },
     {
         "latitude": 59.898711399866166,
@@ -679,7 +705,8 @@
         "Journée découverte": "Programmée",
         "lieu": "SANDVIKA",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Norway - Lic Scadenta.png"
     },
     {
         "latitude": 52.263575795910675,
@@ -695,7 +722,8 @@
         "Journée découverte": "Programmée",
         "lieu": "WARSZAWA",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SleeperOne"
+        "Produit": "QuickSleeper 5, SleeperOne",
+        "logo":"assets\\logos\\Poland - Implant Dental.png"
     },
     {
         "latitude": 49.81291846718561,
@@ -711,7 +739,8 @@
         "Journée découverte": "Programmée",
         "lieu": "BIELSKO-BIALA",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SleeperOne"
+        "Produit": "QuickSleeper 5, SleeperOne",
+        "logo":"assets\\logos\\Poland - Marrodent.png"
     },
     {
         "latitude": 38.7964053048877,
@@ -727,7 +756,8 @@
         "Journée découverte": "Programmée",
         "lieu": "SINTRA",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Portugal - Biofix.png"
     },
     {
         "latitude": 44.44269865219444,
@@ -743,7 +773,8 @@
         "Journée découverte": "Programmée",
         "lieu": "BUCHAREST",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Romania - Dentotal Protect.png"
     },
     {
         "latitude": 48.995579255734235,
@@ -775,7 +806,8 @@
         "Journée découverte": "Programmée",
         "lieu": "SKOFJA LOKA",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Slovenia - Dental Market.png"
     },
     {
         "latitude": 35.8644050070421,
@@ -791,7 +823,8 @@
         "Journée découverte": "Programmée",
         "lieu": "DAEGU",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SleeperOne"
+        "Produit": "QuickSleeper 5, SleeperOne",
+        "logo":"assets\\logos\\Megagen.jpg"
     },
     {
         "latitude": 41.34251311206558,
@@ -807,7 +840,8 @@
         "Journée découverte": "Programmée",
         "lieu": "SANT BOI DE LLOBREGAT",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Spain - DVD.png"
     },
     {
         "latitude": 41.39495655576196,
@@ -815,7 +849,7 @@
         "Gestionnaire": "Armin Eberdorfer",
         "Distributeur": "BARREIRO MEDICAL GRUP S.L.",
         "Adresse": "CALLE PAMPLONA, 92-94, 3º 3ª",
-        "zipcode":"" ,
+        "zipcode": "",
         "Zone": "08830",
         "Responsable": "ANTONIO BARREIRO",
         "mail": "antoniobarreiro@bmggrup.com",
@@ -839,7 +873,8 @@
         "Journée découverte": "Programmée",
         "lieu": "KADIKOY",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Turkey - Surmeli.png"
     },
     {
         "latitude": 25.139078784444226,
@@ -863,7 +898,7 @@
         "Gestionnaire": "Hamed Sargazi",
         "Distributeur": "SWALLOW DENTAL SUPLLIES LTD",
         "Adresse": "UNIT 5 MARRTREE BUSINESS PARK",
-        "zipcode":"" ,
+        "zipcode": "",
         "Zone": "BD200EF",
         "Responsable": "JAMES WELLER",
         "mail": "James.Weller@swallowdental.co.uk",
@@ -871,7 +906,8 @@
         "Journée découverte": "Programmée",
         "lieu": "Silsden, West Yorkshire",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SleeperOne"
+        "Produit": "QuickSleeper 5, SleeperOne",
+        "logo":"assets\\logos\\United Kingdom - SWALLOW.png"
     },
     {
         "latitude": 29.742868998984797,
@@ -879,7 +915,7 @@
         "Gestionnaire": "Hamed Sargazi",
         "Distributeur": "NUSMILE",
         "Adresse": "3315 W 12TH STREET",
-        "zipcode":"" ,
+        "zipcode": "",
         "Zone": "77008",
         "Responsable": "CHRIS MALZONE",
         "mail": "chris@nusmiletech.com",
@@ -887,7 +923,8 @@
         "Journée découverte": "Programmée",
         "lieu": "HOUSTON, TX",
         "Dentiste référent?": "",
-        "Produit": "SOAN, SleeperOne, Effitec Needles"
+        "Produit": "SOAN, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\logo NuSmile.png"
     },
     {
         "latitude": 45.81643033599538,
@@ -903,6 +940,7 @@
         "Journée découverte": "Programmée",
         "lieu": "Zagreb",
         "Dentiste référent?": "",
-        "Produit": "QuickSleeper 5, SleeperOne, Effitec Needles"
+        "Produit": "QuickSleeper 5, SleeperOne, Effitec Needles",
+        "logo":"assets\\logos\\Croatie - Novaeteam.jpg"
     }
 ]

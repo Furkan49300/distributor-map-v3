@@ -4,12 +4,12 @@ let placesListElement;
 let detailsContainer;
 let searchBar;
 let apiKey;
-let resultatpour=document.createElement("h4");
+let resultatpour = document.createElement("h4");
 function loadGoogleMaps() {
-        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-            key: "AIzaSyBcCHz0HxzjTRiB6PnOnIOFtKL7fteGWLE"
-        });
-        initMap();
+    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+        key: "AIzaSyBcCHz0HxzjTRiB6PnOnIOFtKL7fteGWLE"
+    });
+    initMap();
 };
 
 
@@ -51,14 +51,14 @@ async function initMap() {
 
     autocomplete.addListener("place_changed", () => {
         const place = autocomplete.getPlace();
-        let address= place["formatted_address"];
+        let address = place["formatted_address"];
         console.log(address);
         map.panTo(place.geometry.location);
         map.setZoom(10);
 
         let resultat = address.replace(/\d+/g, '');
-        resultatpour.innerHTML="Résultats pour " + resultat;
-        searchBar.insertAdjacentElement('afterend',resultatpour);
+        resultatpour.innerHTML = "Résultats pour " + resultat;
+        searchBar.insertAdjacentElement('afterend', resultatpour);
 
         const sortedMarkers = sortMarkersByDistance(place.geometry.location);
         updatePlacesList(sortedMarkers);
@@ -68,7 +68,7 @@ async function initMap() {
 
 function addMarker(place) {
     const defaultIcon = {
-        url:"marker.png",
+        url: "marker.png",
         scaledSize: new google.maps.Size(25, 34),
         anchor: new google.maps.Point(12.5, 34)
     };
@@ -110,20 +110,20 @@ function updatePlacesList(placesWithDistances) {
     placesWithDistances.forEach(({ place, distance }) => {
         const listItem = createListItem(place, distance);
         placesListElement.appendChild(listItem);
-        
+
     });
 }
 
 
 function createListItem(place, distance) {
-    
+
     const listItem = document.createElement("li");
     listItem.innerHTML = `
     <p class="agence-title">${place.Distributeur} </p>
     <p class="agence-subtitle">${place.Adresse}, ${place.zipcode} ${place.lieu}</p>
     ${distance !== undefined ? `<p><strong> ${distance.toFixed(1)} km</strong></p>` : ""}
   `;
-  
+
     listItem.classList.add("place-item");
     listItem.onclick = () => {
         map.panTo({ lat: place.latitude, lng: place.longitude });
@@ -136,46 +136,48 @@ function createListItem(place, distance) {
 
 function showPlaceDetails(place) {
     detailsContainer.innerHTML = `
-    <div class="header-container">
-<img id="logo" src="logo.jpg"/>
+    
+<img id="logo" src="${place.logo}" />
 
-</div>
+
 <div class="place-detail">
+
     <div class="cadre">
-    <div id="back-button" aria-label="Retour"> <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6a1.997 1.997 0 0 0 0-2.822L6.83 13H21v-2z" fill="blue"/>
-        </svg>
-  Revenir à la page précédente
-</div>
-        <p class="agence-title-detail">Agence ${place.Distributeur} ${place.lieu}</p>
+    
+        <p class="agence-title-detail">${place.Distributeur} ${place.lieu}</p>
         <p class="agence-subtitle"> ${place.Adresse}</p>
-    </div>
+    
     <div class="details-section">
     <h2> Détails</h2>
     <ul>
-    <li>Produits: <span>${place.Produit}</span></li>
-    <li>Zone: <span>${place.Zone}</span></li>
-    <li>Gestionnaire: <span>${place.Gestionnaire}</span></li>
-    <li>Responsable: <span>${place.Responsable}</span></li>
-    <li>Email: ${place.mail}</li>
-    <li>Téléphone: ${place['Téléphone']}</li>
-    <li>Journée découverte: <span>${place['Journée découverte']}</span></li>
+    <li>Produits : <span>${place.Produit}</span></li>
+    <li>Zone : <span>${place.Zone}</span></li>
+    <li>Gestionnaire : <span>${place.Gestionnaire}</span></li>
+    <li>Responsable : <span>${place.Responsable}</span></li>
+    <li>Email : ${place.mail}</li>
+    <li>Téléphone : ${place['Téléphone']}</li>
+    <li>Journée découverte : <span>${place['Journée découverte']}</span></li>
 </ul>
+<div id="back-button" aria-label="Retour"> 
+  Revenir à la page précédente
 </div>
+</div>
+
+    </div>
     
     </div>
   `;
     detailsContainer.style.display = "block";
     placesListElement.style.display = "none";
     searchBar.style.display = "none";
-    resultatpour.style.display='none';
+    resultatpour.style.display = 'none';
 
 
     document.querySelector("#back-button").onclick = () => {
         detailsContainer.style.display = "none";
         placesListElement.style.display = "block";
         searchBar.style.display = "flex";
-        resultatpour.style.display='block';
+        resultatpour.style.display = 'block';
 
 
         map.setCenter({ lat: 46.603354, lng: 1.888334 });

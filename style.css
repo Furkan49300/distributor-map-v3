@@ -6,7 +6,6 @@ html {
   background-color: #f7f8fa;
 }
 
-
 #mapContainer {
   display: flex;
   height: 100vh;
@@ -40,7 +39,6 @@ html {
   box-shadow: 0 0 10px -5px rgba(0, 0, 0, .3);
 }
 
-
 #places-list {
   list-style: none;
   padding: 0;
@@ -62,21 +60,15 @@ html {
   transform: translateX(5px);
 }
 
-
-
 .highlight {
   background-color: #e7f1ff;
 
 }
 
-
-
 #place-details {
   display: none;
   overflow-y: auto;
 }
-
-
 
 #back-button {
   color: #004899;
@@ -87,16 +79,17 @@ html {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
+  margin-top: 25px;
 }
 
 #back-button svg {
   fill: #004899;
 }
+
 #map {
   flex: 1;
 }
-
 
 #places-list::-webkit-scrollbar {
   width: 6px;
@@ -111,29 +104,19 @@ html {
   display: none;
 }
 
-
-
-
-#logo {
-  width: 100%;
-}
-
-.place-detail {
-  padding: 25px;
-}
-
 .cadre {
   padding: 25px;
   width: 80%;
   margin: auto;
-  border: 1px solid #b1b2b3;
-  border-radius: 18px;
-  margin-top: -3rem;
   background: white;
   position: relative;
   z-index: 100;
-  margin-bottom: 30px;
   ;
+}
+
+#logo {
+  width: 100%;
+  height: auto;
 }
 
 .header-container {
@@ -194,6 +177,12 @@ html {
     overflow-y: auto;
     max-height: 500px;
   }
+
+  #logo {
+    width: 50%;
+    height: auto;
+    margin: auto;
+  }
 }
 
 .agence-title {
@@ -218,28 +207,33 @@ h4 {
 
 .agence-title-detail {
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 0px;
   font-family: 'MerriweatherRegular', Arial, Tahoma, Verdana, Helvetica, sans-serif;
-  color: #4b4a4b
+  color: black
 }
 
 p.agence-subtitle {
-  color: #4b4a4b
+  color: black
 }
 
 li {
-  color: #4b4a4b;
+  color: black;
   font-family: 'Source Sans 3';
   padding: 3px 3px;
 }
 
 h2 {
   font-family: 'MerriweatherRegular', Arial, Tahoma, Verdana, Helvetica, sans-serif;
-  color: #4b4a4b;
+  color: black;
   font-size: 18px;
   font-weight: 400;
 }
 
 ul {
   padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.details-section {
+  margin-top: 40px;
 }

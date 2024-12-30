@@ -66,8 +66,9 @@ html {
 }
 
 #place-details {
-  display: none;
   overflow-y: auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 #back-button {
@@ -105,13 +106,8 @@ html {
 }
 
 .cadre {
-  padding: 25px;
-  width: 80%;
-  margin: auto;
-  background: white;
-  position: relative;
-  z-index: 100;
-  ;
+  padding: 30px;
+  
 }
 
 #logo {
@@ -168,7 +164,6 @@ html {
 
   }
 
-
   #sidebar {
     width: 100%;
   }
@@ -182,6 +177,7 @@ html {
     width: 50%;
     height: auto;
     margin: auto;
+    padding: 20px  0px 20px 0px;
   }
 }
 

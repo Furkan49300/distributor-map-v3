@@ -140,7 +140,6 @@ function showPlaceDetails(place) {
 <img id="logo" src="${place.logo}" />
 
 
-<div class="place-detail">
 
     <div class="cadre">
     
@@ -165,9 +164,9 @@ function showPlaceDetails(place) {
 
     </div>
     
-    </div>
+    
   `;
-    detailsContainer.style.display = "block";
+    detailsContainer.style.display = "flex";
     placesListElement.style.display = "none";
     searchBar.style.display = "none";
     resultatpour.style.display = 'none';
